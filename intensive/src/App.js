@@ -5,12 +5,21 @@ import MyTextareas from "./components/MyTextareas";
 import MyButtons from "./components/MyButtons";
 
 class App extends React.Component{
-  
+    constructor(props){
+      super(props)
+      this.handleSubmit = this.handleSubmit.bind(this)
+    }
+
+
+    handleSubmit(e){
+      e.preventDefault()
+    }
+
   render() {
   return (
     <div className={style.app}>
       <h1>Создание анкеты</h1>
-      <form className={style.form}>
+      <form onSubmit={this.handleSubmit} className={style.form}>
         <div className={style.block}>
           <MyInputs label={"Фамилия"} placeholder={"Фамилия"} />
           <MyInputs label={"Имя"} placeholder={"Имя"} />
