@@ -7,7 +7,11 @@ class MyInputs extends React.Component {
         return (
             <label>
                 <p>{this.props.label}:</p>
-                <input className={style.input} type="text" placeholder={this.props.placeholder}/>
+                {(this.props.name === "birthDate") ? <input {...this.props} className={style.input} type="date"
+                    value={this.props.value} />
+                    : <input {...this.props} className={style.input} type="text"
+                        value={this.props.value} />
+                }
             </label>
         )
     }

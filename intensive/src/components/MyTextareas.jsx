@@ -6,7 +6,7 @@ class MyTextareas extends React.Component {
         return (
             <label>
                 <p>{this.props.label}:</p>
-                    <textarea className={style.textarea} maxlength="435" rows="7" placeholder={this.props.placeholder}></textarea>
+                <textarea className={style.textarea} maxLength="600" rows="7" {...this.props}></textarea>
             </label>
         )
     }
