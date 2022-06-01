@@ -1,15 +1,14 @@
 import React from "react";
 import style from "./MyTextareas.module.css"
-class MyTextareas extends React.Component {
 
-    render() {
+
+const MyTextareas = (props) => {
         return (
             <label>
-                <p>{this.props.label}:</p>
-                <textarea className={style.textarea} maxLength="600" rows="7" {...this.props}></textarea>
+                <p>{props.label}:</p>
+                <textarea className={style.textarea} maxLength="600" rows="7" {...props}></textarea>
             </label>
         )
-    }
 }
 
 

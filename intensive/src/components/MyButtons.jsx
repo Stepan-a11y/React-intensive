@@ -1,13 +1,10 @@
 import React from "react";
 import style from "./MyButtons.module.css"
 
-class MyButtons extends React.Component {
-
-    render() {
+const MyButtons = (props) => {
         return (
-            <input className={style.button} {...this.props} />
-        )
-    }
+            <input className={style.button} {...props} />
+        )   
 }
 
 
